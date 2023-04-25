@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404</title>
+    <title>Actor Portfolio</title>
     <!-- Meta Tags -->
     <meta property="og:url" content="https://abbishekprabhu.github.io/">
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Abbishek"/>
     <meta property="og:title" content="Abbishek">
-    <meta property="og:description" content="Passionate front-end developer with one year of experience in creating beautiful and functional user interfaces.">
-    <meta property="og:image" content="https://abbishekprabhu.github.io/images/meta-image.png/">
+    <meta property="og:description" content="Passionate front-end developer with nine months of experience in creating beautiful and functional user interfaces.">
+    <meta property="og:image" content="https://abbishekprabhu.github.io/images/meta-image.png">
     <meta property="og:locale" content="en_us" />
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:domain" value="https://abbishekprabhu.github.io/" />
-    <meta name="twitter:url" value="https://abbishekprabhu.github.io" />
+    <meta name="twitter:url" value="https://abbishekprabhu.github.io/" />
     <meta name="twitter:title" content="Abbishek">
-    <meta name="twitter:description" content="Passionate front-end developer with one year of experience in creating beautiful and functional user interfaces.">
-    <meta name="twitter:image" content="https://abbishekprabhu.github.io/images/meta-image.png/" />
+    <meta name="twitter:description" content="Passionate front-end developer with nine months of experience in creating beautiful and functional user interfaces.">
+    <meta name="twitter:image" content="https:/abbishekprabhu.github.io/images/meta-image.png" />
     <meta name="twitter:label1" value="Abbishek P.M" />
     <meta name="twitter:data1" value="Frontend developer" />
     <meta name="twitter:label2" value="Visit my Portfolio" />
@@ -30,8 +30,9 @@
 <body>
     <div id="cursor"></div>
     <div id="cursor-border"></div>
+    <!-- -----Header----- -->
     <header>
-        <a href="https://abbishekprabhu.github.io" target="_blank" title="Abbishek P.M">
+        <a href="https:/abbishekprabhu.github.io/" target="_blank" title="Abbishek P.M">
         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <circle cx="25" cy="25" r="25" class="fill-one"/>
             <mask id="mask0_29_36" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="50" height="50">
@@ -58,7 +59,6 @@
             <div class="nav-links">
                 <a href="http://abbishekprabhu.github.io/" title="Head Home" data-cursor="pointer">Home</a>
                 <a href="#contact" title="Contact Abbishek." data-cursor="pointer">Contact</a>
-                <a href="#resume" title="Abbiskek's Résumé" data-cursor="pointer">Résumé</a>
             </div>
             <div class="theme">
                 <a href="#theme" title="Choose Your Theme!" data-cursor="pointer"></a>
@@ -72,175 +72,571 @@
             </div>
         </nav>
     </header>
-    <section class="otherpages boxed-up">
-        <div class="expanding">
-            <p class="expanding-letters letter-b">4</p> 
-            <p class="expanding-letters letter-i">0</p>
-            <p class="expanding-letters letter-z1">4</p>
-        </div>
-        <p class="sorry">Sorry, that page doesn't exist. Please return to homepage.</p>
-        <div class="project-button">
-            <a href="http:/abbishekprabhu.github.io/" title="Head Home!" data-cursor="pointer">Return !</a>
-            <span></span>
+    <!-- --------------- -->
+    <!-- ----Content---- -->
+    <section class="boxed-up fourth-section">
+        <h2>Albums & <span class="unique-color">Others</span></h2>
+        <div class="flex-things">
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TfnvAanv7yw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/B4a6Y6N_9-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </section>
-    <script src="script.js"></script>
-    <script>
-        // ----This Javascript Function is used for Animated Cursor
-        const cursor = document.querySelector("#cursor");
-const cursorBorder = document.querySelector("#cursor-border");
-const cursorPos = { x: 0, y: 0 };
-const cursorBorderPos = { x: 0, y: 0 };
-
-document.addEventListener("mousemove", (e) => {
-  cursorPos.x = e.clientX;
-  cursorPos.y = e.clientY;
-
-  cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-});
-
-requestAnimationFrame(function loop() {
-  const easting = 8;
-  cursorBorderPos.x += (cursorPos.x - cursorBorderPos.x) / easting;
-  cursorBorderPos.y += (cursorPos.y - cursorBorderPos.y) / easting;
-
-  cursorBorder.style.transform = `translate(${cursorBorderPos.x}px, ${cursorBorderPos.y}px)`;
-  requestAnimationFrame(loop);
-});
-
-document.querySelectorAll("[data-cursor]").forEach((item) => {
-  item.addEventListener("mouseover", (e) => {
-    if (item.dataset.cursor === "pointer") {
-      cursorBorder.style.backgroundColor = "rgba(255, 255, 255, .6)";
-      cursorBorder.style.setProperty("--size", "30px");
-    }
-    if (item.dataset.cursor === "pointer2") {
-      cursorBorder.style.backgroundColor = "white";
-      cursorBorder.style.mixBlendMode = "difference";
-      cursorBorder.style.setProperty("--size", "80px");
-    }
-  });
-  item.addEventListener("mouseout", (e) => {
-    cursorBorder.style.backgroundColor = "unset";
-    cursorBorder.style.mixBlendMode = "unset";
-    cursorBorder.style.setProperty("--size", "50px");
-  });
-});
-// ----------------------------------------------------------------
-    </script>
-    <script>
-        // This JavaScript Function is used for Matrix Animation. 
-(function() {
-    var	doc = document ,
-    elemList = Construct_SubElement_List( doc.body ) ,
-    len = elemList.length ,
-    win = window ,
-    i , The_Matrix ;
-    for (  i = 0 ; i < len ; i++  ) 
-    {
-    var	currElem	= elemList[i] ;
-    if (  currElem.className && /^matrix-control/.test( currElem.className ))
-    {
-        The_Matrix	=	new  The_Matrix_Obj( currElem ) ;
-    }
-    }
-function The_Matrix_Obj (  ElemObjRef  ) 
-{
-    var	ELEM = ElemObjRef , doc = document , win = window , span_EO = doc.createElement("span") , div_EO = doc.createElement("div") , docFrag = doc.createDocumentFragment() ,
-    ElemList = Construct_SubElement_List( ELEM ) , num = ElemList.length , j , k ;
-    this.ElemObj = ELEM ;
-    this.Cmd_Line_EO = "" ;
-    this.Code_EO = "" ;
-    this.Cursor_EO = "" ;
-    this.Cmd_Typing	= false ;
-    for ( j = 0 ; j < num ; j++ ) 
-    {
-        var	CE = ElemList[j] ;
-        if ( /^Command_Line_sB/.test( CE.className ) )
-            this.Cmd_Line_EO = CE ;
-        else if ( /^matrix-code/.test( CE.className ) )
-            this.Code_EO = CE ;
-        else if ( /^blinking_cursor/.test( CE.className ) )
-            this.Cursor_EO	= CE ;
-    }
-    this.Command_Line = function ( cmdStr ) 
-    {
-        if ( !this.Cmd_Typing ) 
-        {  
-            this.Clear_HTML("cmd") ;
-            this.Cmd_Line_EO.appendChild( Construct_Element_Object( span_EO.cloneNode() , [ [ "className" , "blinking_cursor" ] ] , "" , "" , "" ) ) ;
-            this.Cmd_Line_EO.insertBefore( span_EO.cloneNode() , this.Cmd_Line_EO.firstChild ) ;
-            this.Cmd_Line_EO.firstChild.innerHTML = cmdStr.charAt(0) ;
-            this.Cmd_Typing = true ;
-        } 
-        else 
-        {
-            this.Cmd_Line_EO.firstChild.innerHTML += cmdStr.charAt(0) ;
-            if ( cmdStr.length == 1 ){
-                this.Cmd_Typing = false ;
-                return ;
-            }
+    <!-- --------------- -->
+    <!-- ----Contact---- -->
+    <section class="boxed-up fifth-section" id="contact" >
+        <h5>Contact</h5>
+        <p>I eagerly await your message! Fill out the form or connect with me through other means. I look forward to hearing from you!</p>
+        <form action="https://formsubmit.co/abbishekpm@gmail.com" method="POST" class="contact-form" id="myForm">
+            <input type="text" name="name" placeholder="Your Name" data-cursor="pointer2" id="name" required>
+            <input type="email" name="email" placeholder="Your Email" data-cursor="pointer2" id="my-email" required>
+            <textarea name="paragraph" id="my-text" cols="30" rows="10" placeholder="Your Message" data-cursor="pointer2" required></textarea>
+            <div class="other-ways-and-submit">
+                <div class="other-shares">
+                    <button title="Whatsapp Me!" id="whatsapp"  data-cursor="pointer2"><img src="images/whatsapp.svg" alt="whatsapp" draggable="false"></button>
+                    <button title="Mail Me!" id="gmail"  data-cursor="pointer2"><img src="images/gmail.svg" alt="gmail" draggable="false"></button>
+                </div>
+                <div class="submit-button">
+                    <input type="submit" name="submit" value="Submit" title="I'll Contact You In A While, As Soon As You Submit."  data-cursor="pointer2">
+                    <span></span>
+                </div>
+            </div>
+            <svg width="200" height="190" viewBox="0 0 200 190" fill="none" xmlns="http://www.w3.org/2000/svg" class="form-dotted">
+                <g clip-path="url(#clip0_143_1065)">
+                <circle cx="102.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                </g>
+                <g clip-path="url(#clip1_143_1065)">
+                <circle cx="102.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="102.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="111.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="120.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="129.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="138.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="147.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="156.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="165.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="174.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="183.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="192.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                </g>
+                <g clip-path="url(#clip2_143_1065)">
+                <circle cx="2.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="2.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="11.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="20.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="29.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="38.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="47.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="56.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="65.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="74.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="83.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="92.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                </g>
+                <g clip-path="url(#clip3_143_1065)">
+                <circle cx="2.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="101.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="110.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="119.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="128.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="137.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="146.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="155.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="164.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="173.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="2.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="11.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="20.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="29.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="38.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="47.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="56.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="65.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="74.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="83.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                <circle cx="92.5" cy="182.5" r="2.5" class="fill-two" fill-opacity="0.25"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_143_1065">
+                <rect width="100" height="100" fill="white" transform="translate(100)"/>
+                </clipPath>
+                <clipPath id="clip1_143_1065">
+                <rect width="100" height="100" fill="white" transform="translate(100 90)"/>
+                </clipPath>
+                <clipPath id="clip2_143_1065">
+                <rect width="100" height="100" fill="white"/>
+                </clipPath>
+                <clipPath id="clip3_143_1065">
+                <rect width="100" height="100" fill="white" transform="translate(0 90)"/>
+                </clipPath>
+                </defs>
+            </svg> 
+            <input type="hidden" name="_next" value="http://abbishekprabhu.github.io/thanks.html">
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+    </section>
+    <!-- --------------- -->
+     <!-- -----Footer---- -->
+        <footer>Designed & Developed by Abbishek.</footer>
+        <!-- --------------- -->
+        <script src="script.js"></script>
+        <script>
+            // ----This Javascript Function is used for Animated Cursor
+            const cursor = document.querySelector("#cursor");
+    const cursorBorder = document.querySelector("#cursor-border");
+    const cursorPos = { x: 0, y: 0 };
+    const cursorBorderPos = { x: 0, y: 0 };
+    
+    document.addEventListener("mousemove", (e) => {
+      cursorPos.x = e.clientX;
+      cursorPos.y = e.clientY;
+    
+      cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    });
+    
+    requestAnimationFrame(function loop() {
+      const easting = 8;
+      cursorBorderPos.x += (cursorPos.x - cursorBorderPos.x) / easting;
+      cursorBorderPos.y += (cursorPos.y - cursorBorderPos.y) / easting;
+    
+      cursorBorder.style.transform = `translate(${cursorBorderPos.x}px, ${cursorBorderPos.y}px)`;
+      requestAnimationFrame(loop);
+    });
+    
+    document.querySelectorAll("[data-cursor]").forEach((item) => {
+      item.addEventListener("mouseover", (e) => {
+        if (item.dataset.cursor === "pointer") {
+          cursorBorder.style.backgroundColor = "rgba(255, 255, 255, .6)";
+          cursorBorder.style.setProperty("--size", "30px");
         }
-        win.setTimeout( function() { The_Matrix.Command_Line( cmdStr.substring(1) ); } , 15 ) ;
-    };
-    this._Generate = function () {
-        this.Clear_HTML("matrix") ;
-        var	numCols = 90 , numRows = 80 ;
-        for ( j = 0 ; j < numCols ; j++ ) 
-        {
-            var	colSpan	= span_EO.cloneNode() ;
-            for ( k = 0 ; k < numRows ; k++ ) 
-            {
-                if ( Math.random() <= 0.25 )
-                    var	child_EO = Construct_Element_Object( doc.createElement("b") , "" , "" , [ doc.createTextNode(Math.floor(Math.random()*10)) ] , "" ) ;
-                else
-                    var	child_EO = doc.createTextNode( Math.floor(Math.random()*10) ) ;
-                colSpan.appendChild( Construct_Element_Object( div_EO.cloneNode(), "", "", [ child_EO ], "" ) ) ;
-            }
-            docFrag.appendChild( colSpan ) ;
+        if (item.dataset.cursor === "pointer2") {
+          cursorBorder.style.backgroundColor = "white";
+          cursorBorder.style.mixBlendMode = "difference";
+          cursorBorder.style.setProperty("--size", "80px");
         }
-        this.Code_EO.appendChild( docFrag ) ;
-        win.setTimeout( function(){ The_Matrix._Generate() ; } , 600 ) ;
-    } ;
-    this.Clear_HTML = function ( clearType ) 
-    {
-        if ( clearType == "matrix" )
-            while ( this.Code_EO.firstChild )	this.Code_EO.removeChild( this.Code_EO.firstChild ) ;
-        else if ( clearType == "cmd" )
-            while ( this.Cmd_Line_EO.firstChild )	this.Cmd_Line_EO.removeChild( this.Cmd_Line_EO.firstChild ) ;
-    } ;
-    win.setTimeout( function(){ The_Matrix.Command_Line( "Hi, You're Now In The World Of Matrix" ) ; } , 1000 ) ;
-    win.setTimeout( function(){ The_Matrix.Command_Line( "Welcome To Abbishek's Matrix!" ) ; } , 2000 ) ;
-    win.setTimeout( function(){ The_Matrix.Clear_HTML("cmd") ; The_Matrix._Generate() ; } , 4500 ) ;
-    win.setTimeout( function(){ The_Matrix.ElemObj.className = "matrix-control" ; } , 4600 ) ;
-}
-function	Construct_Element_Object (   elem  ,  propertyArr  ,  methodArr  ,  childArr  ,  innerHTML_CharStr  )  {
-    var	Elem_Obj = elem ,
-        Properties = propertyArr ,
-        Methods	 = methodArr ,
-        Children = childArr ,
-        inner_html = innerHTML_CharStr ,
-        len , i ;
-        len = Properties.length ;
-        for (  i = 0 ; i < len ; i++  )	Elem_Obj[ Properties[i][0] ] = Properties[i][1] ;
-        len = Methods.length ;
-        for (  i = 0 ; i < len ; i++  )	Elem_Obj[ Methods[i][0] ] = Methods[i][1] ;
-        len = Children.length;
-        for (  i = 0 ; i < len ; i++  )	Elem_Obj.appendChild( Children[i] ) ;
-        len = inner_html.length ;
-        if (  len > 0  ) Elem_Obj.innerHTML = inner_html ;
-        return Elem_Obj ;
-}
-function Construct_SubElement_List ( ElemObjRef ) 
-{
-    var	_ELEM = ElemObjRef ,
-        tmpList = _ELEM.getElementsByTagName("*") , tmpLen = tmpList.length , k ,
-           ELEM_LIST = [] ;
-    for (  k = 0 ; k < tmpLen ; k++  ) ELEM_LIST.push( tmpList[k] ) ;
-    return ELEM_LIST ;
-}
-})() ;
-// ----------------------------------------------------------------
-    </script>
-</body>
-</html>
+      });
+      item.addEventListener("mouseout", (e) => {
+        cursorBorder.style.backgroundColor = "unset";
+        cursorBorder.style.mixBlendMode = "unset";
+        cursorBorder.style.setProperty("--size", "50px");
+      });
+    });
+    // ----------------------------------------------------------------
+        </script>
+    </body>
+    </html>
