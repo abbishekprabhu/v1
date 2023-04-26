@@ -1309,5 +1309,32 @@ document.querySelectorAll("[data-cursor]").forEach((item) => {
 });
 // ----------------------------------------------------------------
     </script>
+    <script>
+        const whatsappButton = document.getElementById("whatsapp"),
+    gmailButton = document.getElementById("gmail"),
+    whatsappNumber = "+919611631086",
+    whatsappText = "Hi Abbishek, I am",
+    gmailAddress = "abbishekpm@gmail.com",
+    gmailSubject = "Job Opportunity in [Your Company Name]",
+    gmailBody = "Hello Abbishek, ";
+whatsappButton.addEventListener("click", function () {
+    let e = `https://wa.me/+919611631086?text=${encodeURIComponent("Hi Abbishek, I am")}`;
+    window.open(e, "_blank");
+}),
+    gmailButton.addEventListener("click", function () {
+        let e = `mailto:abbishekpm@gmail.com?subject=${encodeURIComponent("Job Opportunity in [Your Company Name]")}&body=${encodeURIComponent("Hello Abbishek, ")}`;
+        window.open(e, "_blank");
+    });
+    </script>
+    <script>
+         document.addEventListener("contextmenu", (e) => e.preventDefault()),
+    document.addEventListener("keydown", function (e) {
+        e.ctrlKey && 83 === e.keyCode && e.preventDefault();
+    }),
+    document.addEventListener("keydown", function (e) {
+        e.metaKey && 83 === e.keyCode && e.preventDefault();
+    });
+
+    </script>
 </body>
 </html>

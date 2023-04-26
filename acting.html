@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actor Portfolio</title>
+    <title>Abbishek</title>
     <!-- Meta Tags -->
     <meta property="og:url" content="https://abbishekprabhu.github.io/">
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Abbishek"/>
     <meta property="og:title" content="Abbishek">
-    <meta property="og:description" content="Passionate front-end developer with nine months of experience in creating beautiful and functional user interfaces.">
-    <meta property="og:image" content="https://abbishekprabhu.github.io/images/meta-image.png">
+    <meta property="og:description" content="Eager to break into acting, I bring physicality to roles with my background in gymnastics and dance. Ready for new opportunities!">
+    <meta property="og:image" content="https://abbishekprabhu.github.io/images/meta-acting-image.png">
     <meta property="og:locale" content="en_us" />
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:domain" value="https://abbishekprabhu.github.io/" />
     <meta name="twitter:url" value="https://abbishekprabhu.github.io/" />
     <meta name="twitter:title" content="Abbishek">
-    <meta name="twitter:description" content="Passionate front-end developer with nine months of experience in creating beautiful and functional user interfaces.">
-    <meta name="twitter:image" content="https:/abbishekprabhu.github.io/images/meta-image.png" />
+    <meta name="twitter:description" content="Eager to break into acting, I bring physicality to roles with my background in gymnastics and dance. Ready for new opportunities!">
+    <meta name="twitter:image" content="https://abbishekprabhu.github.io/images/meta-acting-image.png" />
     <meta name="twitter:label1" value="Abbishek P.M" />
-    <meta name="twitter:data1" value="Frontend developer" />
+    <meta name="twitter:data1" value="Actor" />
     <meta name="twitter:label2" value="Visit my Portfolio" />
     <meta name="twitter:data2" value="at https://abbishekprabhu.github.io/" />
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -73,8 +73,24 @@
         </nav>
     </header>
     <!-- --------------- -->
+     <!-- -----Banner----- -->
+     <section class="boxed-up first-section">
+        <div class="introduction">
+            <p>Hey there,</p>
+            <h1>I'M <span class="unique-color">ABBISHEK.</span></h1>
+            <p>Eager to break into acting, I bring physicality to roles with my background in gymnastics and dance. Ready for new opportunities!</p>
+            <div class="project-button">
+                <a href="#projects" title="Know About Abbishek's Projects." data-cursor="pointer">Projects</a>
+                <span></span>
+            </div>
+        </div>
+        <a href="#projects" class="arrow" title="Fast Forward to About Part." data-cursor="pointer">
+            <span>&darr;</span>
+        </a>
+    </section>
+    <!-- --------------- -->
     <!-- ----Content---- -->
-    <section class="boxed-up fourth-section">
+    <section class="boxed-up second-section" id="projects">
         <h2>Albums & <span class="unique-color">Others</span></h2>
         <div class="flex-things">
             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TfnvAanv7yw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -637,6 +653,33 @@
       });
     });
     // ----------------------------------------------------------------
+        </script>
+        <script>
+            const whatsappButton = document.getElementById("whatsapp"),
+            gmailButton = document.getElementById("gmail"),
+            whatsappNumber = "+919611631086",
+            whatsappText = "Hi Abbishek, I am",
+            gmailAddress = "abbishekpm@gmail.com",
+            gmailSubject = "Audition in [Your Company Name]",
+            gmailBody = "Hello Abbishek, ";
+            whatsappButton.addEventListener("click", function () {
+            let e = `https://wa.me/+919611631086?text=${encodeURIComponent("Hi Abbishek, I am")}`;
+            window.open(e, "_blank");
+            }),
+            gmailButton.addEventListener("click", function () {
+            let e = `mailto:abbishekpm@gmail.com?subject=${encodeURIComponent("Audition in [Your Company Name]")}&body=${encodeURIComponent("Hello Abbishek, ")}`;
+            window.open(e, "_blank");
+            });
+        </script>
+        <script>
+             document.addEventListener("contextmenu", (e) => e.preventDefault()),
+    document.addEventListener("keydown", function (e) {
+        e.ctrlKey && 83 === e.keyCode && e.preventDefault();
+    }),
+    document.addEventListener("keydown", function (e) {
+        e.metaKey && 83 === e.keyCode && e.preventDefault();
+    });
+
         </script>
     </body>
     </html>
