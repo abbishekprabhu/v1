@@ -1,6 +1,6 @@
 # Techfolio
 ## Abbishek's Portfolio 😎
-<br/>
+
 ### I have designed and developed this portfolio on my own. The Techfolio is a meticulously researched, thoughtfully designed, and developer-friendly portfolio. It is reusable and tailored for developers proficient in Figma. The portfolio can be accessed here.
 
 ![portfolio](https://user-images.githubusercontent.com/98374007/235634772-96782b29-35bf-46be-b870-eb0b0dac333d.png)
