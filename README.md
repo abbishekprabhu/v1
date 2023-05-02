@@ -8,3 +8,5 @@
 
 #### I have mentioned the one asset below which you can download and use it with figma or you can do it by your own by searching your own asset and edit it using figma.
 ![laptop](https://user-images.githubusercontent.com/98374007/235636235-b5d90a23-b0f5-4064-9f2f-d9f17beec51a.svg)
+
+##### Do give me credits for my works if you used mine. I would appreciate that. Thanks!
