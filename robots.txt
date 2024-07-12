@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://www.abbishek.in
+Sitemap: https://v1.abbishek.in
